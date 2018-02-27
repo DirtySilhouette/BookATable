@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - BookATable</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+    <style>
+        .navbar {
+            margin-bottom: 0;
+            background-color: #f4511e;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .navbar li a, .navbar .navbar-brand {
+            color: #fff !important;
+        }
+
+        .navbar-nav li a:hover, .navbar-nav li.active a {
+            color: #f4511e !important;
+            background-color: #fff !important;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("BookATable", "HomePage", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" style="float:right;">
+                    <li>@Html.ActionLink("Home", "HomePage", "Home")</li>
+
+                    @{
+                        if (BookATable.Filters.AdminFilter.IsNotLoggedUser() == false)
+                        {
+                            <li>@Html.ActionLink("Reservations", "Index", "Reservation")</li>
+                            <li>@Html.ActionLink("Restaurants", "Index", "Restaurants")</li>
+                            {
+                                if (BookATable.Filters.AdminFilter.IsAdmin() == true)
+                                {
+                                    <li>@Html.ActionLink("Users", "Index", "Users")</li>
+                                }
+                            }
+                                <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
+                        }
+                    }
+                    
+                    @{
+                        if (BookATable.Filters.AdminFilter.IsNotLoggedUser() != false)
+                        {
+                            <li>@Html.ActionLink("Login", "Login", "Home")</li>
+
+                            <li>@Html.ActionLink("Register", "Register", "Users")</li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p style="text-align:center">&copy; @DateTime.Now.Year - BookATable</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

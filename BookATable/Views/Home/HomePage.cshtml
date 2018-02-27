@@ -1,0 +1,250 @@
+﻿@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+      //  window.onscroll = function () { scrollFunction() };
+
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+
+    <style>
+        body {
+            font: 400 15px Lato, sans-serif;
+            line-height: 1.8;
+            color: #818181;
+        }
+
+        h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #303030;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            color: #303030;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .jumbotron {
+            background-color: #f4511e;
+            color: #fff;
+            padding: 80px 25px;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .container-fluid {
+            padding: 60px 50px;
+        }
+
+        .thumbnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 0;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+         }
+
+        .navbar {
+            margin-bottom: 0;
+            background-color: #f4511e;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .navbar li a, .navbar .navbar-brand {
+            color: #fff !important;
+        }
+
+        .navbar-nav li a:hover, .navbar-nav li.active a {
+            color: #f4511e !important;
+            background-color: #fff !important;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+
+        footer .glyphicon {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #f4511e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="http://twinyc.com/g/2/re/restaurant-decor-chicken-trends-interior-design-bar-interiors-posters-and-wallpapers-wallpaper-pictures-for-walls-smooth-frp-panels-amazing-designs-cheap-ideas.jpg" alt="Los Angeles" style=" height:40em;width:100%;">
+                </div>
+
+                <div class="item">
+                    <img src="https://urbanmatter.com/chicago/wp-content/uploads/2015/04/Top-10-Restaurants.jpg" alt="Chicago" style=" height:40em; width:100%;">
+                </div>
+
+                <div class="item">
+                    <img src="https://www.bellagio.com/content/dam/MGM/bellagio/dining/prime-steakhouse/architecture/bellagio-prime-steakhouse-architecture.tiff" alt="New york" style=" height:40em; width:100%;">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Container (Portfolio Section) -->
+    <div class="container-fluid text-center bg-grey">
+        <h2 style="margin-bottom:40px;">Top restaurants in Plovdiv</h2>
+        <div class="row text-center">
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="https://smokini.bg/assets/front/images/interior/11.jpg" alt="Smokini" width="400" height="300">
+                    <p><strong>Smokini</strong></p>
+                    <p>"Otets Paisiy 12", Centre, Plovdiv</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="http://www.georgistoilov.com/wp-content/uploads/DSC_0160a.jpg" alt="Pavaj" width="400" height="300">
+                    <p><strong>Pavaj</strong></p>
+                    <p>"Zlatarska Street 7", Kapana, Plovdiv</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="https://sombrero-bg.com/sites/default/files/0002.www_.miroslavmendev.com_.jpg" alt="Sombrero" width="400" height="300">
+                    <p><strong>Sombrero</strong></p>
+                    <p>"Dunav 5", Royal City Centre, Plovdiv</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container (Pricing Section) -->
+    <div id="pricing" class="container-fluid">
+        <div class="text-center">
+            <h2>This week's special offers</h2>
+        </div>
+        <div class="row slideanim">
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Smokini</h1>
+                    </div>
+                    <div class="panel-body">
+                        <p><strong>350g</strong> Green salad with mango</p>
+                        <p><strong>180g</strong> Oysters with mignonette jelly</p>
+                        <p><strong>250g</strong> Grilled mushrooms with herbs</p>
+                        <p><strong>1</strong> Caramel dessert muffin</p>
+                        <p><strong>500ml</strong> Fanta or Coca Cola</p>
+                    </div>
+                    <div class="panel-footer">
+                        <h3>$30</h3>
+                        <h4>per head</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Pavaj</h1>
+                    </div>
+                    <div class="panel-body">
+                        <p><strong>400g</strong> Avocado and roasted potato salad</p>
+                        <p><strong>170g</strong> Fish cakes</p>
+                        <p><strong>350g</strong> Pasta with salami and olives</p>
+                        <p><strong>1</strong> Rich chocolate cake</p>
+                        <p><strong>500ml</strong> Fanta or Coca Cola</p>
+                    </div>
+                    <div class="panel-footer">
+                        <h3>$35</h3>
+                        <h4>per head</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Sombrero</h1>
+                    </div>
+                    <div class="panel-body">
+                        <p><strong>300g</strong> Mexican street salad</p>
+                        <p><strong>180g</strong> Mini ham and smashed pea frittata</p>
+                        <p><strong>400g</strong> Potato curry with roti</p>
+                        <p><strong>1</strong> Strawberry toffee</p>
+                        <p><strong>500ml</strong> Fanta or Coca Cola</p>
+                    </div>
+                    <div class="panel-footer">
+                        <h3>$40</h3>
+                        <h4>per head</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div id="contact" class="container-fluid bg-grey">
+        <h2 class="text-center">Contact us</h2>
+        <div class="row">
+            <div class="col-sm-12" style="text-align:center">
+                <p>Contact us via email and we'll get back to you within 24 hours, or via telephone.</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> Plovdiv, BG</p>
+                <p><span class="glyphicon glyphicon-phone"></span> +359 899227755</p>
+                <p><span class="glyphicon glyphicon-envelope"></span> bookatable@support.com</p>
+            </div>
+         </div>
+    </div>
+    <footer class="container-fluid text-center">
+        <a onclick="topFunction()" href="#myPage" title="To Top">
+           <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+           <p>Website made by Tottie Designs.</p>
+    </footer>
+</body>
