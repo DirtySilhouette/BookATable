@@ -50,9 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BookATableContext.cs" />
-    <Compile Include="Migrations\201802221756255_Automatic.cs" />
-    <Compile Include="Migrations\201802221756255_Automatic.Designer.cs">
-      <DependentUpon>201802221756255_Automatic.cs</DependentUpon>
+    <Compile Include="Migrations\201803081702004_Automatic.cs" />
+    <Compile Include="Migrations\201803081702004_Automatic.Designer.cs">
+      <DependentUpon>201803081702004_Automatic.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,8 +73,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201802221756255_Automatic.resx">
-      <DependentUpon>201802221756255_Automatic.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803081702004_Automatic.resx">
+      <DependentUpon>201803081702004_Automatic.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

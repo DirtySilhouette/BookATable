@@ -1,17 +1,40 @@
 ﻿@model BookATable.ViewModels.Users.UsersListViewModel
+@{
+    ViewBag.Title = "Users";
+}
 
-<h2>Users</h2>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 
-@Html.ActionLink("Create new", "Create", "Users")
+    <style>
+        .table th {
+            text-align: center;
+            color: white;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .table td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<h2 style="text-align:center;">Users</h2>
+
+@Html.ActionLink("Create new", "Create", "Users", new { @class = "btn btn-info", @style = "background-color: #F4511E; border: none" })
+
+<hr/>
 
 <table class="table">
-    <thead>
+    <thead style="background-color: #F4511E;">
         <tr>
             <th>Name</th>
             <th>Email</th>
             <th>Password</th>
             <th>Phone</th>
-            <th>IsAdmin</th>
+            <th>Admin</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>

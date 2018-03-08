@@ -1,15 +1,36 @@
 ﻿@model BookATable.ViewModels.Restaurants.RestaurantsListViewModel
+@{
+    ViewBag.Title = "Restaurants";
+}
 
-<h2>Restaurants</h2>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+    <style>
+        .table th {
+            text-align: center;
+            color: white;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .table td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<h2 style="text-align:center;">Restaurants</h2>
 @{
     if (BookATable.Filters.AdminFilter.IsAdmin())
     {
-        @Html.ActionLink("Create new", "Create", "Restaurants")
+        @Html.ActionLink("Create new", "Create", "Restaurants", new { @class = "btn btn-info", @style= "background-color: #F4511E; border: none" })
     }
 }
 
+<hr />
+
 <table class="table">
-    <thead>
+    <thead style="background-color: #F4511E;">
         <tr>
             <th>Name</th>
             <th>Address</th>
@@ -17,8 +38,11 @@
             <th>Capacity</th>
             <th>Open Hour</th>
             <th>Close Hour</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
     </thead>
+
     <tbody>
         @foreach (var restaurant in Model.Restaurants)
         {
@@ -30,14 +54,11 @@
                 <td>@restaurant.OpenHour</td>
                 <td>@restaurant.CloseHour</td>
            
-                
                 @{
                     if (BookATable.Filters.AdminFilter.IsAdmin())
                     {
                         <td>@Html.ActionLink("Edit", "Edit", "Restaurants", new { id = restaurant.ID }, new { @class = "btn btn-success glypchicon glyphicon-pencil" })</td>
-
                         <td>@Html.ActionLink("Delete", "Delete", "Restaurants", new { id = restaurant.ID }, new { @class = "btn btn-danger" })</td>
-
                     }
                 }
             </tr>

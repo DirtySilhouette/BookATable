@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using BookATable.Entity;
 
 namespace BookATable.Entity
 {
@@ -10,9 +8,14 @@ namespace BookATable.Entity
     {
         public int UserId { get; set; }
         public int RestaurantId { get; set; }
+        
+        [Range(1, 100), Required]
         public int PeopleCount { get; set; }
+
         public DateTime ReservationTime { get; set; }
+
         public string Comment { get; set; }
+
         public virtual User User { get; set; }
         public virtual Restaurant Restaurant { get; set; }
     }

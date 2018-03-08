@@ -80,7 +80,7 @@ namespace BookATable.Controllers
             }
 
             Reservation reservation = new Reservation();
-            reservation.UserId = 1;
+            reservation.UserId = model.UserId;
             reservation.RestaurantId = model.RestaurantId;
             reservation.PeopleCount = model.PeopleCount;
             reservation.ReservationTime = model.ReservationTime.Date;

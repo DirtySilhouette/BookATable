@@ -13,7 +13,7 @@ namespace BookATable.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201802221756255_Automatic"; }
+            get { return "201803081702004_Automatic"; }
         }
         
         string IMigrationMetadata.Source

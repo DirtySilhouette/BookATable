@@ -1,20 +1,40 @@
 ﻿@model BookATable.ViewModels.Reservations.ReservationsListViewModel
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Reservations";
 }
 
-<h2>Reservations</h2>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 
-@Html.ActionLink("Create new", "Create", "Reservation")
+    <style>
+        .table th {
+            text-align: center;
+            color: white;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .table td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<h2 style="text-align:center;">Reservations</h2>
+
+@Html.ActionLink("Create new", "Create", "Reservation", new { @class = "btn btn-info", @style = "background-color: #F4511E; border: none" })
+
+<hr />
 
 <table class="table">
-    <thead>
+    <thead style="background-color: #F4511E;">
         <tr>
             <th>User</th>
             <th>Restaurant</th>
-            <th>ReservationTime</th>
-            <th>PeopleCount</th>
+            <th>Reservation Time</th>
+            <th>People Count</th>
             <th>Comment</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -39,4 +59,3 @@
         }
     </tbody>
 </table>
-
